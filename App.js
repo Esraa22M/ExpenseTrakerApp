@@ -4,7 +4,10 @@ import { NavigationContainerWrapper } from "./src/navigation/navigation-containe
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
-
+import { AuthContextProvider } from "./src/store/auth.context";
+import { InputsContextProvider } from "./src/store/inputs.context";
+import { ExpenseContextProvider } from "./src/store/expenses.context";
+import FlatButton from "./src/ui/flat-button/flat-button.components";
 SplashScreen.preventAutoHideAsync();
 export default function App() {
 	const [loaded, error] = useFonts({
@@ -22,8 +25,14 @@ export default function App() {
 	}
 	return (
 		<View style={styles.container}>
-			<StatusBar style="auto" />
-			<NavigationContainerWrapper />
+			<AuthContextProvider>
+			<ExpenseContextProvider>
+				<InputsContextProvider>
+					<StatusBar style="auto" />
+					<FlatButton>esrasa</FlatButton>
+					<NavigationContainerWrapper />
+				</InputsContextProvider>
+			</ExpenseContextProvider></AuthContextProvider>
 		</View>
 	);
 }

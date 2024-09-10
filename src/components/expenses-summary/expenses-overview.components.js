@@ -1,13 +1,11 @@
-import { View, ScrollView } from "react-native";
-import { ExpensesSummary } from "./expenses-summary/expenses-summary.components";
+import { View } from "react-native";
 import { ExpensesList } from "./expenses-list/expenses-list.components";
-import { dummyData } from "../../backend/data";
 import { Styles } from "./expenses-overview.styles";
-export const ExpensesOverview = ({ expenses, periodName }) => {
+export const ExpensesOverview = ({expenses, periodName,fallbackText }) => {
 	return (
 		<View style={Styles.outerContainer}>
 			<View style={Styles.innerContainer}>
-				<ExpensesList expenses={dummyData} periodName={periodName} />
+				<ExpensesList expenses={expenses} periodName={periodName} fallbackText={fallbackText } />
 			</View>
 		</View>
 	);

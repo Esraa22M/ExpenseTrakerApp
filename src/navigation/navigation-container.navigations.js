@@ -4,8 +4,10 @@ import { styles } from "./navigation.styles";
 import { SafeAreaView } from "react-native-safe-area-context";
 export const NavigationContainerWrapper = () => {
 	return (
-		<SafeAreaView style={styles.container}><NavigationContainer>
-			<StackNavigator />
-		</NavigationContainer></SafeAreaView>
+		<SafeAreaView style={styles.container}>
+			<NavigationContainer>
+				<StackNavigator />
+			</NavigationContainer>
+		</SafeAreaView>
 	);
 };

@@ -7,5 +7,6 @@ export const GlobalStyles = {
 		,
 		dark50: "#808080",
 		dark100: "#1b1b1b",
+		error:'#F44336'
 	},
 };

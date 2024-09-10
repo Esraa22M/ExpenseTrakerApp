@@ -45,4 +45,9 @@ export const styles = StyleSheet.create({
 		marginBottom: 10,
 	},
 	pressed: { opacity: 0.2, backgroundColor: GlobalStyles.colors.primary100 },
+	infoText: {
+		fontSize: 16,
+		color: GlobalStyles.colors.dark100,
+		textAlign: "center",
+	},
 });
