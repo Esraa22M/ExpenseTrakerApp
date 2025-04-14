@@ -7,7 +7,6 @@ import { SingupScreen } from "../screens/auth-screens/singup/singup.screens";
 const Stack = createNativeStackNavigator();
 export const StackNavigator = () => (
 	<Stack.Navigator
-		initialRouteName="ExpenseOverView"
 		screenOptions={{
 			headerStyle: { backgroundColor: GlobalStyles.colors.primary100 },
 			headerTintColor: "white",

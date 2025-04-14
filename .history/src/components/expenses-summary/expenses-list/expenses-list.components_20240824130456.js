@@ -16,7 +16,6 @@ export const ExpensesList = ({ expenses, periodName, fallbackText }) => {
 				data={expenses}
 				keyExtractor={(item) => item.id}
 				renderItem={RenderExpenseItem}
-				showsVerticalScrollIndicator={false}
 				ListHeaderComponent={
 					<ExpensesSummary periodName={periodName} expenses={expenses} />
 				}
